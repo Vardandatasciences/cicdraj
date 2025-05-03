@@ -4,4 +4,6 @@ from src.app import greet
 
 def test_greet_default():
     # Should return default greeting
-    assert True == True
+    a = True
+    assert a == True
+
