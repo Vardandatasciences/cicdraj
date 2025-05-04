@@ -1,1 +1,1 @@
-password = "Vardan"
+p = "Vardan"
