@@ -46,7 +46,7 @@ jobs:
           args: --file=requirements.txt
 
     - name: Install Snyk CLI for Code Scan
-      uses: snyk/actions/setup@v1
+      uses: snyk/actions/setup@master
 
     - name: Run Snyk Code Scan
       run: snyk code test
