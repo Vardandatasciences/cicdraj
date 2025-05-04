@@ -38,10 +38,19 @@ jobs:
         pip install pytest
         pytest tests
 
-    - name: Snyk Security Scan
-      uses: snyk/actions/python@master
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        args: --file=requirements.txt
+         - name: Snyk Dependency Scan
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --file=requirements.txt
+
+        - name: Install Snyk CLI for Code Scan
+        uses: snyk/actions/setup@v1
+
+        - name: Run Snyk Code Scan
+        run: snyk code test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
 
