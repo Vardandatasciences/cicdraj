@@ -46,7 +46,7 @@ jobs:
           args: --file=requirements.txt
 
       - name: Set up Snyk CLI for Code Scan
-        uses: snyk/actions/setup@v2
+        uses: snyk/actions/setup@v1
         with:
           version: latest
 
