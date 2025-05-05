@@ -11,7 +11,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 
 from models import db, Actor, Group, Customer, Activity, Task, ActivityAssignment, Message, Report, Analytics
 
-app = Flask(__name__)
+app = Flask(__name suresh__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost/aawe'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 CORS(app)  # Enable CORS to allow frontend requests
