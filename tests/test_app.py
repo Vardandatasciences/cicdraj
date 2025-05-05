@@ -1,6 +1,6 @@
-# Sample testing
-
-def test_greet_default():
-    # Should return default greeting
-    assert True
+def greet(name="Vardaan World"):
     
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    print(greet())
