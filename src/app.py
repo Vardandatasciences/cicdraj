@@ -1,4 +1,4 @@
-def greet(name="Vardaan Res World"):
+def greet(name="Vardaan World"):
     return f"Hello, {name}!"
 
 
