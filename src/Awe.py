@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localh
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 CORS(app)  # Enable CORS to allow frontend requests
 
-# Register blueprint
+# Register blueprints
 app.register_blueprint(tasks_bp)
 
 print("app.py --------------------------------------------entered")
