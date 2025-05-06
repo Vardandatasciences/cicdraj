@@ -40,7 +40,7 @@ jobs:
       run: |
         if [ -d "tests" ]; then
           pip install pytest
-          pytest tests
+          pytest tests/  # Run all tests in the 'tests' directory
         else
           echo "No tests/ directory found. Skipping tests."
         fi
