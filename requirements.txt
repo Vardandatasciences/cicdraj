@@ -27,3 +27,4 @@ matplotlib
 reportlab
 flask_bcrypt
 dash==2.9.0
+pytest
