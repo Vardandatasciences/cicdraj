@@ -39,9 +39,8 @@ jobs:
 
     - name: Run Unit Tests if present
       run: |
-        if [ -d "tests" ]; then
           pip install pytest
-          pytest tests/  # Run all tests in the 'tests' directory
+          pytest src/  # Run all tests in the 'src' directory
         else
           echo "No tests/ directory found. Skipping tests."
         fi
