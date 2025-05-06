@@ -32,18 +32,10 @@ jobs:
         pip install flake8
         flake8 src || true  # prevent breaking on lint issues
 
-    - name: Run App
-      run: |
-        echo "Running app.py to show greeting..."
-        python src/app.py
-
     - name: Run Unit Tests if present
       run: |
-          pip install pytest
-          pytest src/  # Run all tests in the 'src' directory
-        else
-          echo "No tests/ directory found. Skipping tests."
-        fi
+        pip install pytest
+        pytest src/  # Run all tests in the 'src' directory
 
     - name: Snyk Dependency Scan
       uses: snyk/actions/python@master
