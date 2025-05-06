@@ -21,7 +21,7 @@ app.register_blueprint(tasks_bp)
 
 print("app.py --------------------------------------------entered")
 
-# Initialize SQLAlchemy with the app
+# Initialize SQLAlchemy with the apps
 db.init_app(app)
 
 # Initialize Dash application
