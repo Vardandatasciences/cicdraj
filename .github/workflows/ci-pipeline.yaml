@@ -36,7 +36,7 @@ jobs:
         echo "Running app.py to show greeting..."
         python src/app.py
 
-    -name: Run Unit Tests if present
+    - name: Run Unit Tests if present
       run: |
         pip install pytest  # Install pytest
         pytest src  # Run all tests directly from the 'src' folder
