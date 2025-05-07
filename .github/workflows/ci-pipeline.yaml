@@ -38,8 +38,9 @@ jobs:
 
     - name: Run Unit Tests if present
       run: |
-        pip install pytest  # Install pytest
+        pip install pytest  # Install pytest if not already installed
         pytest src  # Run all tests directly from the 'src' folder
+
 
     - name: Snyk Dependency Scan
       uses: snyk/actions/python@master
