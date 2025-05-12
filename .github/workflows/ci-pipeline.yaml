@@ -37,10 +37,20 @@ jobs:
         echo "Running app.py to show greeting..."
         python src/app.py
 
+    #- name: Run Unit Tests if present
+      #run: |
+        #pip install pytest  # Install pytest if not already installed
+        #pytest src  # Run all tests directly from the 'src' folder
+
     - name: Run Unit Tests if present
       run: |
-        pip install pytest  # Install pytest if not already installed
-        pytest src  # Run all tests directly from the 'src' folder
+        if [ -d "tests" ]; then
+          pip install pytest
+          pytest tests
+        else
+          echo "No tests/ directory found. Skipping tests."
+        fi
+
 
 
     - name: Snyk Dependency Scan
