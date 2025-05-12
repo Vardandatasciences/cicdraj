@@ -63,7 +63,7 @@ jobs:
     - name: Install Snyk CLI for Code Scan
       uses: snyk/actions/setup@master
 
-    #- name: Run Snyk Code Scan
-      #run: snyk code test
-      #env:
-        #SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: Run Snyk Code Scan
+      run: snyk code test
+       env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
